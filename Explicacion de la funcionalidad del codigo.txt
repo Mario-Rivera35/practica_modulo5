@@ -1,0 +1,174 @@
+package herencias;
+
+//ahora crearemos las clases hijos heredadas de la clase padre
+public class Circulo extends Formas {
+    private  String Radio;
+    private String color;
+    
+    //constructor clase estudiante 
+     public Circulo( String color, String Radio){
+         this.color=color;
+         this.Radio=Radio;
+         
+         establecerdibujar("Circulo");
+         establecercalculararea("area sombreada/15cm");
+         
+     }
+
+   
+   
+    // luego declarasmos los datos que deseamos imprimir 
+     public void imprimirinformacion(){
+         System.out.println("Color:"+color);
+         System.out.println("Radio:"+Radio);//con esto indicamos la linea a mostrar con los datos
+         System.out.println("Dibujar:"+dibujar);
+         System.out.println("Radio a Calcular:"+calcularRadio);
+
+        
+    }
+}
+
+
+package herencias;
+
+import static javafx.scene.paint.Color.color;
+import static javafx.scene.paint.Color.color;
+
+
+public class Formas {
+   //atributos;
+    private String color;
+    // el protected se colaca por cunado se declara la variable
+    // al imprimir nos genera un error por el la variable es de instancia
+    // privada y no nos permite hacer referencia con la variable.
+    // esto por que estamos heredando de la clase padre y con el protectd
+    //nos da como un permiso que ese dato estara protegido siempre.
+    protected String dibujar;
+    private String establecercolor;
+    protected String calcularRadio;
+    protected String calculararea;
+     protected String calcularangulo;
+    
+    
+    
+    
+    public Formas(){
+       
+        // ahora por los memonetos dejamos el constructor
+        //forma por mientras damos los parametros.
+        
+        
+    }
+    // ahora vamos a crear los metodos establecer y crear.
+     public  void establecerdibujar(String dibujar){
+        this.dibujar=dibujar;    
+     }
+      public String obtenerdibujar(String dibujar){
+          this.dibujar=dibujar;
+        return null;
+          
+      }
+      public  void establecercalcularRadio(String calcularRadio){
+        this.calcularRadio= calcularRadio;  
+     }
+      public String obtenercalcularRadio(String calcularRadio){
+        this.calcularRadio= calcularRadio;
+        return null;
+          
+      }
+       public  void establecercalculararea(String calculararea){
+        this.calculararea= calculararea;  
+     }
+      public String obtenercalculararea(String calculararea){
+        this.calculararea= calculararea;
+        return null;
+          
+      }
+      public  void establecercalcularangulo(String calcularangulo){
+        this.calcularangulo= calcularangulo;  
+     }
+      public String obtenercalcalcularangulo(String calcularangulo){
+        this.calcularangulo= calcularangulo;
+        return null;
+          
+      }
+}
+
+ 
+
+
+
+package herencias;
+
+//ahora crearemos las clases hijos heredadas de la clase padre
+public class Circulo extends Formas {
+    private  String Radio;
+    private String color;
+    
+    //constructor clase estudiante 
+     public Circulo( String color, String Radio){
+         this.color=color;
+         this.Radio=Radio;
+         
+         establecerdibujar("Circulo");
+         establecercalculararea("area sombreada/15cm");
+         
+     }
+
+   
+   
+    // luego declarasmos los datos que deseamos imprimir 
+     public void imprimirinformacion(){
+         System.out.println("Color:"+color);
+         System.out.println("Radio:"+Radio);//con esto indicamos la linea a mostrar con los datos
+         System.out.println("Dibujar:"+dibujar);
+         System.out.println("Radio a Calcular:"+calcularRadio);
+
+        
+    }
+}
+
+ackage herencias;
+
+
+public class Lineas extends Formas {
+    
+    private String Largo;
+    private String color;
+    
+    // metodo constructor de lineas con este se  hace el llamado 
+    // a la clase padre para que nos muestra la informacion que queremos visualizar
+     public Lineas( String Color, String Largo){
+         this.color=color;
+         this.Largo=Largo;
+         establecerdibujar("Linea/100cm");
+         
+     }
+
+   
+     public void imprimirinformacion(){
+         System.out.println("color:"+color);
+         System.out.println("Largo:"+Largo);
+         System.out.println("Dibujar:"+dibujar);
+     }
+}
+package herencias;
+
+
+public class Cuadrado  extends Formas{
+    public String Area;
+    public String color;
+    
+     public Cuadrado( String color,String Area){
+         this.color=color;
+         this.Area=Area;
+        establecerdibujar("Cuadrado");
+        establecercalculararea("circunferencia/3.1416");
+     }
+      public void imprimirinformacion(){
+          System.out.println("Color:"+color);
+         System.out.println("Area:"+Area);
+         System.out.println("Dibujar:"+dibujar);
+         System.out.println("Area a Calcular:"+calculararea);
+}
+}
